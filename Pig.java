@@ -1,17 +1,17 @@
 public class Pig {
 
   String name;
-  float weight;
+  double weight;
   double exerciseHours;
-  int poundsOfFood;
+  double poundsOfFood;
   boolean lastFed;
-  int weightAdd;
+  double weightAdd;
 
   public Pig(String name){
     this.name = name;
     this.weight = 2.89;
     this.exerciseHours = 0;
-    this.poundsOfFood = 0
+    this.poundsOfFood = 0;
     this.lastFed = false;
   }
 
@@ -28,7 +28,7 @@ public class Pig {
   }
 
   public void feed(int poundsOfFood){
-    this.weightAdd = poundsOfFood * .75;
+    this.weightAdd = (this.poundsOfFood * .75);
     this.weight = this.weight + this.weightAdd;
     oink();
     System.out.println("You have just fed" + name);
@@ -49,6 +49,15 @@ public class Pig {
       System.out.println(name + " has just exercised.");
     }
 
+  }
+
+  public void blueRibbon(){
+    if (this.weight > 1000){
+      System.out.println("You're pig is elligble for the Blue Ribbon");
+    } else {
+      System.out.println("You're pig is not elligble for the Blue Ribbon");
+
+    }
   }
 
 }

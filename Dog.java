@@ -84,5 +84,10 @@ public class Dog {
 
     }
 
+  public int getHappiness(){
+    return this.happiness;
+  }
+
+
 
 }
